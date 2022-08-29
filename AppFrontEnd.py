@@ -1,5 +1,6 @@
 import pyspark
 from pyspark.sql.functions import *
+from pyspark.sql import functions as sf
 from pyspark.sql import SparkSession 
 from pyspark.conf import SparkConf
 from pyspark.context import SparkContext
@@ -33,6 +34,7 @@ df_cust=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
                                      url="jdbc:mysql://localhost:3306/creditcard_capstone",\
                                      dbtable="creditcard_capstone.CDW_SAPP_CUSTOMER").load()
 df_cust.show()
+df_credit = df_credit.withColumn("TIMEIDSTRR", sf.concat(substring(df_credit.TIMEID,0,4), lit('-'),substring(df_credit.TIMEID,3,2), lit('-'), substring(df_credit.TIMEID, 5,2)))
 
 #Function to collect transaction information by user input zip, month and year.
 #1. Join cust and credit table by ssn
@@ -41,11 +43,11 @@ df_cust.show()
 #4. Change dtype from string to date to sorting in desc order
 
 def get_credit_card_transaction_byzip_monthyear(zipcode, month, year):
-    dateid = year + "-" + month + "-01"
+    dateid = year + month 
     df_credit.join(df_cust, df_credit.CUST_SSN == df_cust.SSN, 'inner'). \
         select(df_credit.TRANSACTION_ID, df_credit.CUST_SSN, df_cust.CUST_ZIP, df_credit.TIMEID, df_credit.TRANSACTION_TYPE, df_credit.TRANSACTION_VALUE). \
-        filter((df_cust.CUST_ZIP==zipcode) & (trunc(col('TIMEID'),"Month") == dateid)). \
-        sort(to_date(df_credit.TIMEID, "yyyy-MM-dd").desc()).show()
+        filter((df_cust.CUST_ZIP==zipcode) & (df_credit.TIMEID.like(dateid + '%'))). \
+        sort(df_credit.TIMEID.desc()).show()
 
 #Function to display the number and total values of transactions for a user input transaction type
 #1. Group by Transaction type and aggregate by Transaction ID with sum of transaction value
@@ -98,11 +100,11 @@ def update_customer_info(custSSN, custaddress):
 # Function to generate a monthly bill for a credit card number for a given month and year.
 
 def get_monthly_bill_by_creditcard_forsinglemonth(ccnumber, month, year):
-    dateid = year + "-" + month + "-01"
+    dateid = year + month
     df_credit.join(df_cust, df_credit.CUST_SSN == df_cust.SSN, 'inner'). \
         select(df_credit.TRANSACTION_ID, df_credit.CUST_SSN, df_cust.Credit_card_no, df_cust.CUST_ZIP, df_credit.TIMEID, df_credit.TRANSACTION_TYPE, df_credit.TRANSACTION_VALUE). \
-        filter((df_cust.Credit_card_no==ccnumber) & (trunc(col('TIMEID'),"Month") == dateid)). \
-        sort(to_date(df_credit.TIMEID, "yyyy-MM-dd").desc()).show() 
+        filter((df_cust.Credit_card_no==ccnumber) & (df_credit.TIMEID.like(dateid + '%'))). \
+        sort(df_credit.TIMEID.desc()).show()
 
 # Function to display the transactions made by a customer between two dates. Order by year, month, and day 
 # in descending order.
@@ -112,9 +114,9 @@ def get_transaction_details_between_period_for_customer(custSSN, fromDate, toDat
     df_credit.join(df_cust, df_credit.CUST_SSN == df_cust.SSN, 'inner'). \
         select(df_credit.TRANSACTION_ID, df_credit.CUST_SSN, df_cust.Credit_card_no, df_cust.CUST_ZIP, df_credit.TIMEID, df_credit.TRANSACTION_TYPE, df_credit.TRANSACTION_VALUE). \
         filter((df_cust.SSN==custSSN) & \
-        (to_date(df_credit.TIMEID, "yyyy-MM-dd") >= fromDate) & \
-        (to_date(df_credit.TIMEID, "yyyy-MM-dd") <= toDate) ). \
-        sort(to_date(df_credit.TIMEID, "yyyy-MM-dd").desc()).show() 
+        (df_credit.TIMEID >= fromDate) & \
+        (df_credit.TIMEID <= toDate) ). \
+        sort(df_credit.TIMEID.desc()).show() 
 
 def displayPrompt():
     print(""" Please select numbers between 1 and 7 for appropriate action
@@ -128,8 +130,8 @@ def displayPrompt():
     7 - To display the transactions made by a customer between two dates.
 
     """)
-
-displayPrompt()
+    
+    displayPrompt()
 optionentered = input("Select Option between 1 and 7 or Enter QUIT:")
 while(optionentered!= "QUIT"):
     optionselected = int(optionentered) #to verify the numeric input
@@ -174,7 +176,8 @@ while(optionentered!= "QUIT"):
         get_monthly_bill_by_creditcard_forsinglemonth(ccnumber= creditnumber,month= monthstr,year= str(year))
     elif (optionselected==7):
         custSSN = input("Please enter Customer SSN:")
-        startdate = input("Enter Start Date as YYYY-MM-DD :")
-        enddate = input("Enter end Date as YYYY-MM-DD :")
+        startdate =input("Enter Start Date as YYYYMMDD :")
+        enddate = input("Enter end Date as YYYYMMDD :")
         get_transaction_details_between_period_for_customer(custSSN=custSSN, fromDate=startdate, toDate=enddate)
     optionentered = input("Select Option between 1 and 7 or Enter QUIT:")
+
