@@ -7,9 +7,6 @@ from pyspark.context import SparkContext
 conf = SparkConf().setAppName("AppFrontEnd2").setMaster("local")
 sc = SparkSession.builder.config("spark.driver.host", "localhost") \
 .config ("spark.sql.execution.arrow.enabled", "true").getOrCreate()
-#.config ("spark.sql.shuffle.partitions", "50") \
-#.config("spark.driver.maxResultSize","5g") \
-
 
 # Read Credit Card Info from DB to a Data Frame
 df_credit=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
@@ -17,7 +14,7 @@ df_credit=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
                                      password="lakshmi",\
                                      url="jdbc:mysql://localhost:3306/creditcard_capstone",\
                                      dbtable="creditcard_capstone.CDW_SAPP_CREDIT_CARD").load()
-df_credit.show()
+#df_credit.show()
 
 # Read Branch Info from DB to a Data Frame
 df_branch=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
@@ -25,7 +22,7 @@ df_branch=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
                                      password="lakshmi",\
                                      url="jdbc:mysql://localhost:3306/creditcard_capstone",\
                                      dbtable="creditcard_capstone.CDW_SAPP_BRANCH").load()
-df_branch.printSchema()
+#df_branch.printSchema()
 
 # Read Customer Info from DB to a Data Frame
 df_cust=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
@@ -33,12 +30,11 @@ df_cust=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
                                      password="lakshmi",\
                                      url="jdbc:mysql://localhost:3306/creditcard_capstone",\
                                      dbtable="creditcard_capstone.CDW_SAPP_CUSTOMER").load()
-df_cust.show()
-df_credit = df_credit.withColumn("TIMEIDSTRR", sf.concat(substring(df_credit.TIMEID,0,4), lit('-'),substring(df_credit.TIMEID,3,2), lit('-'), substring(df_credit.TIMEID, 5,2)))
+#df_cust.show()
 
 #Function to collect transaction information by user input zip, month and year.
 #1. Join cust and credit table by ssn
-#2. Filter using cust zip and (month and year) by truncating TimeID column until month.
+#2. Filter using cust zip and (month and year) 
 #3. Compare user input with filtered values(zip, month and date)
 #4. Change dtype from string to date to sorting in desc order
 
@@ -97,6 +93,7 @@ def update_customer_info(custSSN, custaddress):
     df_cust.withColumn('FULL_STREET_ADDRESS', lit(custaddress)
     ).filter(df_cust.SSN == custSSN).show()
 
+
 # Function to generate a monthly bill for a credit card number for a given month and year.
 
 def get_monthly_bill_by_creditcard_forsinglemonth(ccnumber, month, year):
@@ -131,7 +128,7 @@ def displayPrompt():
 
     """)
     
-    displayPrompt()
+displayPrompt()
 optionentered = input("Select Option between 1 and 7 or Enter QUIT:")
 while(optionentered!= "QUIT"):
     optionselected = int(optionentered) #to verify the numeric input
@@ -139,10 +136,18 @@ while(optionentered!= "QUIT"):
         print("Incorrect Option Selected")
     elif (optionselected == 1):
         zipcode = int(input("Please enter desired zip code:"))
+        if ((zipcode >= 0) & (zipcode<99999)):
+            print("Hi")
+        while ((zipcode < 0) | (zipcode>=99999)):
+            zipcode = int(input("Please enter valid zip code:"))
         month = int(input("Please enter two digit month:"))
+        while ((month <= 0) | (month>12)):
+            month = int(input("Please enter valid digit month:"))
         year = int(input("Please enter four digit year:"))
-        print("Selected month:", month)
+        while ((year < 2000) | (year>2022)):
+            year = int(input("Please enter four digit year:"))
         print("Selected zipcode:", zipcode)
+        print("Selected month:", month)
         print("Selected Year:", year)
         if(month<10): #adding 0 to convert as two digit string if its less than 10
             monthstr = '0' + str(month)
@@ -154,18 +159,30 @@ while(optionentered!= "QUIT"):
         get_transaction_summary_by_transaction_type(transactiontype=transactiontype)
     elif (optionselected == 3):
         statecode=input("Please enter desired state code:")
+        while (len(statecode) > 2):
+            statecode=input("State code is wrong!!!Please enter valid desired state code:")
+        
         get_transaction_summary_by_branchstate(branchstate=statecode)
     elif (optionselected == 4):
-        custSSN = input("Please enter Customer SSN:")
+        custSSN = int(input("Please enter Customer SSN:"))
+        while (len(str(custSSN)) != 9):
+            custSSN = int(input("Customer SSN is wrong!!!Please enter a valid Customer SSN:"))
+        
         get_customer_info(custSSN=custSSN)
     elif (optionselected == 5):
         custSSN = input("Please enter Customer SSN:")
+        while (len(str(custSSN)) != 9):
+            custSSN = int(input("Please enter a valid Customer SSN:"))
         cust_address = input("Please enter Updated Customer Address :")
         update_customer_info(custSSN=custSSN, custaddress= cust_address)
     elif (optionselected == 6):
         creditnumber = int(input("Please enter desired Credit Card #:"))
         month = int(input("Please enter two digit month:"))
+        while ((month <= 0) | (month>12)):
+            month = int(input("Please enter valid digit month:"))
         year = int(input("Please enter four digit year:"))
+        while ((year < 2000) | (year>2022)):
+            year = int(input("Please enter four digit year:"))
         print("Selected Credit Card:", creditnumber)
         print("Selected month:", month)
         print("Selected Year:", year)
@@ -176,8 +193,11 @@ while(optionentered!= "QUIT"):
         get_monthly_bill_by_creditcard_forsinglemonth(ccnumber= creditnumber,month= monthstr,year= str(year))
     elif (optionselected==7):
         custSSN = input("Please enter Customer SSN:")
+        while (len(str(custSSN)) != 9):
+            custSSN = int(input("Please enter a valid Customer SSN:"))
         startdate =input("Enter Start Date as YYYYMMDD :")
         enddate = input("Enter end Date as YYYYMMDD :")
         get_transaction_details_between_period_for_customer(custSSN=custSSN, fromDate=startdate, toDate=enddate)
     optionentered = input("Select Option between 1 and 7 or Enter QUIT:")
+
 
