@@ -1,3 +1,9 @@
+#getting DB user and PWD info
+import os
+
+dbUser = os.environ.get('globalSecretUser')
+dbPwd = os.environ.get('globalSecretKey')
+
 import pyspark
 from pyspark.sql.functions import *
 from pyspark.sql import functions as sf
@@ -10,24 +16,24 @@ sc = SparkSession.builder.config("spark.driver.host", "localhost") \
 
 # Read Credit Card Info from DB to a Data Frame
 df_credit=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
-                                     user="root",\
-                                     password="lakshmi",\
+                                     user=dbUser,\
+                                     password=dbPwd,\
                                      url="jdbc:mysql://localhost:3306/creditcard_capstone",\
                                      dbtable="creditcard_capstone.CDW_SAPP_CREDIT_CARD").load()
 #df_credit.show()
 
 # Read Branch Info from DB to a Data Frame
 df_branch=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
-                                     user="root",\
-                                     password="lakshmi",\
+                                     user=dbUser,\
+                                     password=dbPwd,\
                                      url="jdbc:mysql://localhost:3306/creditcard_capstone",\
                                      dbtable="creditcard_capstone.CDW_SAPP_BRANCH").load()
 #df_branch.printSchema()
 
 # Read Customer Info from DB to a Data Frame
 df_cust=sc.read.format("jdbc").options(driver="com.mysql.cj.jdbc.Driver",\
-                                     user="root",\
-                                     password="lakshmi",\
+                                     user=dbUser,\
+                                     password=dbPwd,\
                                      url="jdbc:mysql://localhost:3306/creditcard_capstone",\
                                      dbtable="creditcard_capstone.CDW_SAPP_CUSTOMER").load()
 #df_cust.show()
