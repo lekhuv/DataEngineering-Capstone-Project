@@ -1,0 +1,1137 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0624.2136                               -->
+<workbook original-version='18.1' source-build='2022.2.0 (20222.22.0624.2136)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='cdw_sapp_credit_card+ (creditcard_capstone)' inline='true' name='federated.1058ris0gt2hzj13jm1u01jz0rh8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mariadb.063tp9y1u7vrqa1duiar20moyqnc'>
+            <connection class='mariadb' dbname='creditcard_capstone' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mariadb.063tp9y1u7vrqa1duiar20moyqnc' name='cdw_sapp_branch' table='[cdw_sapp_branch]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='mariadb.063tp9y1u7vrqa1duiar20moyqnc' name='cdw_sapp_credit_card' table='[cdw_sapp_credit_card]' type='table' />
+          <relation connection='mariadb.063tp9y1u7vrqa1duiar20moyqnc' name='cdw_sapp_branch' table='[cdw_sapp_branch]' type='table' />
+          <relation connection='mariadb.063tp9y1u7vrqa1duiar20moyqnc' name='cdw_sapp_customer' table='[cdw_sapp_customer]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[BRANCH_CITY]' value='[cdw_sapp_branch].[BRANCH_CITY]' />
+          <map key='[BRANCH_CODE (cdw_sapp_branch)]' value='[cdw_sapp_branch].[BRANCH_CODE]' />
+          <map key='[BRANCH_CODE]' value='[cdw_sapp_credit_card].[BRANCH_CODE]' />
+          <map key='[BRANCH_NAME]' value='[cdw_sapp_branch].[BRANCH_NAME]' />
+          <map key='[BRANCH_PHONE]' value='[cdw_sapp_branch].[BRANCH_PHONE]' />
+          <map key='[BRANCH_STATE]' value='[cdw_sapp_branch].[BRANCH_STATE]' />
+          <map key='[BRANCH_STREET]' value='[cdw_sapp_branch].[BRANCH_STREET]' />
+          <map key='[BRANCH_ZIP]' value='[cdw_sapp_branch].[BRANCH_ZIP]' />
+          <map key='[CUST_CC_NO]' value='[cdw_sapp_credit_card].[CUST_CC_NO]' />
+          <map key='[CUST_CITY]' value='[cdw_sapp_customer].[CUST_CITY]' />
+          <map key='[CUST_COUNTRY]' value='[cdw_sapp_customer].[CUST_COUNTRY]' />
+          <map key='[CUST_EMAIL]' value='[cdw_sapp_customer].[CUST_EMAIL]' />
+          <map key='[CUST_PHONE]' value='[cdw_sapp_customer].[CUST_PHONE]' />
+          <map key='[CUST_SSN]' value='[cdw_sapp_credit_card].[CUST_SSN]' />
+          <map key='[CUST_STATE]' value='[cdw_sapp_customer].[CUST_STATE]' />
+          <map key='[CUST_ZIP]' value='[cdw_sapp_customer].[CUST_ZIP]' />
+          <map key='[Credit_card_no]' value='[cdw_sapp_customer].[Credit_card_no]' />
+          <map key='[FIRST_NAME]' value='[cdw_sapp_customer].[FIRST_NAME]' />
+          <map key='[FULL_STREET_ADDRESS]' value='[cdw_sapp_customer].[FULL_STREET_ADDRESS]' />
+          <map key='[LAST_NAME]' value='[cdw_sapp_customer].[LAST_NAME]' />
+          <map key='[LAST_UPDATED (cdw_sapp_customer)]' value='[cdw_sapp_customer].[LAST_UPDATED]' />
+          <map key='[LAST_UPDATED]' value='[cdw_sapp_branch].[LAST_UPDATED]' />
+          <map key='[MIDDLE_NAME]' value='[cdw_sapp_customer].[MIDDLE_NAME]' />
+          <map key='[SSN]' value='[cdw_sapp_customer].[SSN]' />
+          <map key='[TIMEID]' value='[cdw_sapp_credit_card].[TIMEID]' />
+          <map key='[TRANSACTION_ID]' value='[cdw_sapp_credit_card].[TRANSACTION_ID]' />
+          <map key='[TRANSACTION_TYPE]' value='[cdw_sapp_credit_card].[TRANSACTION_TYPE]' />
+          <map key='[TRANSACTION_VALUE]' value='[cdw_sapp_credit_card].[TRANSACTION_VALUE]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>CUST_CC_NO</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CUST_CC_NO]</local-name>
+            <parent-name>[cdw_sapp_credit_card]</parent-name>
+            <remote-alias>CUST_CC_NO</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TIMEID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TIMEID]</local-name>
+            <parent-name>[cdw_sapp_credit_card]</parent-name>
+            <remote-alias>TIMEID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CUST_SSN</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CUST_SSN]</local-name>
+            <parent-name>[cdw_sapp_credit_card]</parent-name>
+            <remote-alias>CUST_SSN</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_CODE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BRANCH_CODE]</local-name>
+            <parent-name>[cdw_sapp_credit_card]</parent-name>
+            <remote-alias>BRANCH_CODE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TRANSACTION_TYPE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TRANSACTION_TYPE]</local-name>
+            <parent-name>[cdw_sapp_credit_card]</parent-name>
+            <remote-alias>TRANSACTION_TYPE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TRANSACTION_VALUE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TRANSACTION_VALUE]</local-name>
+            <parent-name>[cdw_sapp_credit_card]</parent-name>
+            <remote-alias>TRANSACTION_VALUE</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TRANSACTION_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TRANSACTION_ID]</local-name>
+            <parent-name>[cdw_sapp_credit_card]</parent-name>
+            <remote-alias>TRANSACTION_ID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_CODE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BRANCH_CODE (cdw_sapp_branch)]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>BRANCH_CODE</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BRANCH_NAME]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>BRANCH_NAME</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_STREET</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BRANCH_STREET]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>BRANCH_STREET</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_CITY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BRANCH_CITY]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>BRANCH_CITY</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BRANCH_STATE]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>BRANCH_STATE</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_ZIP</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BRANCH_ZIP]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>BRANCH_ZIP</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BRANCH_PHONE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BRANCH_PHONE]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>BRANCH_PHONE</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAST_UPDATED</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LAST_UPDATED]</local-name>
+            <parent-name>[cdw_sapp_branch]</parent-name>
+            <remote-alias>LAST_UPDATED</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SSN</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SSN]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>SSN</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FIRST_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FIRST_NAME]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>FIRST_NAME</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MIDDLE_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MIDDLE_NAME]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>MIDDLE_NAME</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAST_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LAST_NAME]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>LAST_NAME</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Credit_card_no</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Credit_card_no]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>Credit_card_no</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FULL_STREET_ADDRESS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FULL_STREET_ADDRESS]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>FULL_STREET_ADDRESS</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CUST_CITY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CUST_CITY]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>CUST_CITY</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CUST_STATE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CUST_STATE]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>CUST_STATE</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CUST_COUNTRY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CUST_COUNTRY]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>CUST_COUNTRY</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CUST_ZIP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CUST_ZIP]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>CUST_ZIP</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CUST_PHONE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CUST_PHONE]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>CUST_PHONE</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CUST_EMAIL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CUST_EMAIL]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>CUST_EMAIL</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAST_UPDATED</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LAST_UPDATED (cdw_sapp_customer)]</local-name>
+            <parent-name>[cdw_sapp_customer]</parent-name>
+            <remote-alias>LAST_UPDATED</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Branch City' datatype='string' name='[BRANCH_CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='BRANCH CODE (cdw sapp branch)' datatype='integer' name='[BRANCH_CODE (cdw_sapp_branch)]' role='dimension' type='ordinal' />
+      <column caption='Branch Code' datatype='integer' name='[BRANCH_CODE]' role='dimension' type='ordinal' />
+      <column caption='Branch Name' datatype='string' name='[BRANCH_NAME]' role='dimension' type='nominal' />
+      <column caption='Branch Phone' datatype='string' name='[BRANCH_PHONE]' role='dimension' type='nominal' />
+      <column caption='Branch State' datatype='string' name='[BRANCH_STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Branch Street' datatype='string' name='[BRANCH_STREET]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Branch Zip' datatype='integer' default-format='*00000' name='[BRANCH_ZIP]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Cust Cc No' datatype='string' name='[CUST_CC_NO]' role='dimension' type='nominal' />
+      <column caption='Cust City' datatype='string' name='[CUST_CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Cust Country' datatype='string' name='[CUST_COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Cust Email' datatype='string' name='[CUST_EMAIL]' role='dimension' type='nominal' />
+      <column caption='Cust Phone' datatype='string' name='[CUST_PHONE]' role='dimension' type='nominal' />
+      <column caption='Cust Ssn' datatype='integer' name='[CUST_SSN]' role='measure' type='quantitative' />
+      <column caption='Cust State' datatype='string' name='[CUST_STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Cust Zip' datatype='string' name='[CUST_ZIP]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='TransactionMonth' datatype='string' name='[Calculation_-8330251932189192189]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='MID([TIMEID],5,2)' />
+      </column>
+      <column caption='Customer Full Name' datatype='string' name='[Calculation_-8330251932190810110]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[FIRST_NAME] + &apos; &apos; + [LAST_NAME]' />
+      </column>
+      <column caption='CustomerCount' datatype='integer' name='[Calculation_-8330251932192419839]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Count([SSN])' />
+      </column>
+      <column caption='Transaction Count' datatype='integer' name='[Calculation_-8330251932193460224]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Count([TRANSACTION_ID])' />
+      </column>
+      <column caption='Credit card no' datatype='string' name='[Credit_card_no]' role='dimension' type='nominal' />
+      <column caption='First Name' datatype='string' name='[FIRST_NAME]' role='dimension' type='nominal' />
+      <column caption='Full Street Address' datatype='string' name='[FULL_STREET_ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Last Name' datatype='string' name='[LAST_NAME]' role='dimension' type='nominal' />
+      <column caption='LAST UPDATED (cdw sapp customer)' datatype='string' name='[LAST_UPDATED (cdw_sapp_customer)]' role='dimension' type='nominal' />
+      <column caption='Last Updated' datatype='string' name='[LAST_UPDATED]' role='dimension' type='nominal' />
+      <column caption='Middle Name' datatype='string' name='[MIDDLE_NAME]' role='dimension' type='nominal' />
+      <column caption='Timeid' datatype='string' name='[TIMEID]' role='dimension' type='nominal' />
+      <column caption='Transaction Id' datatype='integer' name='[TRANSACTION_ID]' role='dimension' type='ordinal' />
+      <column caption='Transaction Type' datatype='string' name='[TRANSACTION_TYPE]' role='dimension' type='nominal' />
+      <column caption='Transaction Value' datatype='real' name='[TRANSACTION_VALUE]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='cdw_sapp_branch' datatype='table' name='[__tableau_internal_object_id__].[cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='cdw_sapp_credit_card' datatype='table' name='[__tableau_internal_object_id__].[cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='cdw_sapp_customer' datatype='table' name='[__tableau_internal_object_id__].[cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='SSN' />
+        <field-sort-custom-order field='Calculation_-8330251932192419839' />
+        <field-sort-custom-order field='FIRST_NAME' />
+        <field-sort-custom-order field='Calculation_-8330251932190810110' />
+        <field-sort-custom-order field='MIDDLE_NAME' />
+        <field-sort-custom-order field='LAST_NAME' />
+        <field-sort-custom-order field='Credit_card_no' />
+        <field-sort-custom-order field='FULL_STREET_ADDRESS' />
+        <field-sort-custom-order field='CUST_CITY' />
+        <field-sort-custom-order field='CUST_STATE' />
+        <field-sort-custom-order field='CUST_COUNTRY' />
+        <field-sort-custom-order field='CUST_ZIP' />
+        <field-sort-custom-order field='CUST_PHONE' />
+        <field-sort-custom-order field='CUST_EMAIL' />
+        <field-sort-custom-order field='LAST_UPDATED (cdw_sapp_customer)' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='cdw_sapp_branch' id='cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1'>
+            <properties context=''>
+              <relation connection='mariadb.063tp9y1u7vrqa1duiar20moyqnc' name='cdw_sapp_branch' table='[cdw_sapp_branch]' type='table' />
+            </properties>
+          </object>
+          <object caption='cdw_sapp_credit_card' id='cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396'>
+            <properties context=''>
+              <relation connection='mariadb.063tp9y1u7vrqa1duiar20moyqnc' name='cdw_sapp_credit_card' table='[cdw_sapp_credit_card]' type='table' />
+            </properties>
+          </object>
+          <object caption='cdw_sapp_customer' id='cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0'>
+            <properties context=''>
+              <relation connection='mariadb.063tp9y1u7vrqa1duiar20moyqnc' name='cdw_sapp_customer' table='[cdw_sapp_customer]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[BRANCH_CODE]' />
+              <expression op='[BRANCH_CODE (cdw_sapp_branch)]' />
+            </expression>
+            <first-end-point object-id='cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396' />
+            <second-end-point object-id='cdw_sapp_branch_7788ECDFF4E6489FB58ABB01AC5147C1' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[CUST_SSN]' />
+              <expression op='[SSN]' />
+            </expression>
+            <first-end-point object-id='cdw_sapp_credit_card_4B6F3644B67B4279AE2074188942C396' />
+            <second-end-point object-id='cdw_sapp_customer_6DF90E4D9B154AC7A617A8E2B163F2A0' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='CustomerStatebySSN'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Customer Count by State</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_credit_card+ (creditcard_capstone)' name='federated.1058ris0gt2hzj13jm1u01jz0rh8' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1058ris0gt2hzj13jm1u01jz0rh8'>
+            <column caption='Cust State' datatype='string' name='[CUST_STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='CustomerCount' datatype='integer' name='[Calculation_-8330251932192419839]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([SSN])' />
+            </column>
+            <column datatype='integer' name='[SSN]' role='measure' type='quantitative' />
+            <column-instance column='[CUST_STATE]' derivation='None' name='[none:CUST_STATE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8330251932192419839]' derivation='User' name='[usr:Calculation_-8330251932192419839:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:CUST_STATE:nk]' />
+              <size column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[usr:Calculation_-8330251932192419839:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[Latitude (generated)]</rows>
+        <cols>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E95119C0-FE71-464D-A4E6-79F8469D1011}' />
+    </worksheet>
+    <worksheet name='Top10Cities'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 cities with highest Healthcare transactions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_credit_card+ (creditcard_capstone)' name='federated.1058ris0gt2hzj13jm1u01jz0rh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1058ris0gt2hzj13jm1u01jz0rh8'>
+            <column caption='Branch City' datatype='string' name='[BRANCH_CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='Transaction Type' datatype='string' name='[TRANSACTION_TYPE]' role='dimension' type='nominal' />
+            <column caption='Transaction Value' datatype='real' name='[TRANSACTION_VALUE]' role='measure' type='quantitative' />
+            <column-instance column='[BRANCH_CITY]' derivation='None' name='[none:BRANCH_CITY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TRANSACTION_TYPE]' derivation='None' name='[none:TRANSACTION_TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TRANSACTION_VALUE]' derivation='Sum' name='[sum:TRANSACTION_VALUE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:BRANCH_CITY:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:BRANCH_CITY:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:BRANCH_CITY:nk]' member='&quot;Acworth&quot;' />
+                <groupfilter function='member' level='[none:BRANCH_CITY:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:TRANSACTION_TYPE:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([TRANSACTION_VALUE])' function='order' user:ui-marker='order'>
+                <groupfilter function='member' level='[none:TRANSACTION_TYPE:nk]' member='&quot;Healthcare&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:BRANCH_CITY:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[sum:TRANSACTION_VALUE:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:TRANSACTION_TYPE:nk]</column>
+            <column>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:BRANCH_CITY:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:BRANCH_CITY:nk]</rows>
+        <cols>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[sum:TRANSACTION_VALUE:qk]</cols>
+      </table>
+      <simple-id uuid='{3E758012-DD40-49D7-86CB-72F83DB675E2}' />
+    </worksheet>
+    <worksheet name='Top20Customers'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 20 Customer Summary by Transaction Value</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_credit_card+ (creditcard_capstone)' name='federated.1058ris0gt2hzj13jm1u01jz0rh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1058ris0gt2hzj13jm1u01jz0rh8'>
+            <column caption='Customer Full Name' datatype='string' name='[Calculation_-8330251932190810110]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[FIRST_NAME] + &apos; &apos; + [LAST_NAME]' />
+            </column>
+            <column caption='First Name' datatype='string' name='[FIRST_NAME]' role='dimension' type='nominal' />
+            <column caption='Last Name' datatype='string' name='[LAST_NAME]' role='dimension' type='nominal' />
+            <column caption='Transaction Value' datatype='real' name='[TRANSACTION_VALUE]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_-8330251932190810110]' derivation='None' name='[none:Calculation_-8330251932190810110:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TRANSACTION_VALUE]' derivation='Sum' name='[sum:TRANSACTION_VALUE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932190810110:nk]'>
+            <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([TRANSACTION_VALUE])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Calculation_-8330251932190810110:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932190810110:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[sum:TRANSACTION_VALUE:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932190810110:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932190810110:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932190810110:nk]</rows>
+        <cols>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[sum:TRANSACTION_VALUE:qk]</cols>
+      </table>
+      <simple-id uuid='{A412A85D-789E-4218-88D1-39259547B46A}' />
+    </worksheet>
+    <worksheet name='Top3TransactionValue'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 3 month Transaction Value</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_credit_card+ (creditcard_capstone)' name='federated.1058ris0gt2hzj13jm1u01jz0rh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1058ris0gt2hzj13jm1u01jz0rh8'>
+            <column caption='TransactionMonth' datatype='string' name='[Calculation_-8330251932189192189]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='MID([TIMEID],5,2)' />
+            </column>
+            <column caption='Transaction Count' datatype='integer' name='[Calculation_-8330251932193460224]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([TRANSACTION_ID])' />
+            </column>
+            <column caption='Timeid' datatype='string' name='[TIMEID]' role='dimension' type='nominal' />
+            <column caption='Transaction Id' datatype='integer' name='[TRANSACTION_ID]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_-8330251932189192189]' derivation='None' name='[none:Calculation_-8330251932189192189:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8330251932193460224]' derivation='User' name='[usr:Calculation_-8330251932193460224:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932189192189:nk]'>
+            <groupfilter count='3' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='[Calculation_-8330251932193460224]' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Calculation_-8330251932189192189:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932189192189:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932189192189:nk]</rows>
+        <cols>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[usr:Calculation_-8330251932193460224:qk]</cols>
+      </table>
+      <simple-id uuid='{F3D7BE7D-3A8C-407C-BAC4-7066F9CBC3F8}' />
+    </worksheet>
+    <worksheet name='TransactionSummarybyType'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Transaction Summary (Count) by Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_credit_card+ (creditcard_capstone)' name='federated.1058ris0gt2hzj13jm1u01jz0rh8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1058ris0gt2hzj13jm1u01jz0rh8'>
+            <column caption='Transaction Count' datatype='integer' name='[Calculation_-8330251932193460224]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([TRANSACTION_ID])' />
+            </column>
+            <column caption='Transaction Id' datatype='integer' name='[TRANSACTION_ID]' role='dimension' type='ordinal' />
+            <column caption='Transaction Type' datatype='string' name='[TRANSACTION_TYPE]' role='dimension' type='nominal' />
+            <column-instance column='[TRANSACTION_TYPE]' derivation='None' name='[none:TRANSACTION_TYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8330251932193460224]' derivation='User' name='[usr:Calculation_-8330251932193460224:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:TRANSACTION_TYPE:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:TRANSACTION_TYPE:nk]</rows>
+        <cols>[federated.1058ris0gt2hzj13jm1u01jz0rh8].[usr:Calculation_-8330251932193460224:qk]</cols>
+      </table>
+      <simple-id uuid='{E83675C1-3CE4-404D-90DB-1C44C1E85AF6}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='44'>
+    <window class='worksheet' name='TransactionSummarybyType'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+            <card pane-specification-id='0' param='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:TRANSACTION_TYPE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{819B0950-B5E9-48F4-A776-4FD16086BDBD}' />
+    </window>
+    <window class='worksheet' maximized='true' name='CustomerStatebySSN'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[usr:Calculation_-8330251932192419839:qk]' type='size' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2E267F94-55A6-42AD-97D2-5F4EEF909E44}' />
+    </window>
+    <window class='worksheet' name='Top20Customers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+            <card pane-specification-id='1' param='[federated.1058ris0gt2hzj13jm1u01jz0rh8].[none:Calculation_-8330251932190810110:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B0927F17-E4EB-406A-937B-EA5BE071D3F6}' />
+    </window>
+    <window class='worksheet' name='Top3TransactionValue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B4F03CE1-F0FE-47D9-A094-E77FDC9EF81B}' />
+    </window>
+    <window class='worksheet' name='Top10Cities'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8A18D8A4-28E1-4F6C-87BD-97C2DE1E9884}' />
+    </window>
+  </windows>
+</workbook>

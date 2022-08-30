@@ -1,0 +1,745 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0624.2136                               -->
+<workbook original-version='18.1' source-build='2022.2.0 (20222.22.0624.2136)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='cdw_sapp_loan_application (creditcard_capstone)' inline='true' name='federated.03kmntn0k1no1m1bnn5nm0h2qmap' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mariadb.1tq8rl21gxcyvk18adyas0jm855d'>
+            <connection class='mariadb' dbname='creditcard_capstone' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mariadb.1tq8rl21gxcyvk18adyas0jm855d' name='cdw_sapp_loan_application' table='[cdw_sapp_loan_application]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mariadb.1tq8rl21gxcyvk18adyas0jm855d' name='cdw_sapp_loan_application' table='[cdw_sapp_loan_application]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Application_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Application_ID]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Application_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Application_Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Application_Status]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Application_Status</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Credit_History</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Credit_History]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Credit_History</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dependents</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Dependents]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Dependents</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Education</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Education]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Education</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Income</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Income]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Income</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Married</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Married]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Married</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property_Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Property_Area]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Property_Area</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Self_Employed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Self_Employed]</local-name>
+            <parent-name>[cdw_sapp_loan_application]</parent-name>
+            <remote-alias>Self_Employed</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65535</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_LONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Application ID' datatype='string' name='[Application_ID]' role='dimension' type='nominal' />
+      <column caption='Application Status' datatype='string' name='[Application_Status]' role='dimension' type='nominal' />
+      <column caption='Loan Application Count' datatype='integer' name='[Calculation_-8511803292752826368]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Count([Application_ID])' />
+      </column>
+      <column caption='Credit History' datatype='string' default-role='measure' default-type='ordinal' name='[Credit_History]' role='dimension' type='nominal' />
+      <column caption='Property Area' datatype='string' name='[Property_Area]' role='dimension' type='nominal' />
+      <column caption='Self Employed' datatype='string' name='[Self_Employed]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='cdw_sapp_loan_application' datatype='table' name='[__tableau_internal_object_id__].[cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Application_ID' />
+        <field-sort-custom-order field='Calculation_-8511803292752826368' />
+        <field-sort-custom-order field='Application_Status' />
+        <field-sort-custom-order field='Credit_History' />
+        <field-sort-custom-order field='Dependents' />
+        <field-sort-custom-order field='Education' />
+        <field-sort-custom-order field='Gender' />
+        <field-sort-custom-order field='Income' />
+        <field-sort-custom-order field='Married' />
+        <field-sort-custom-order field='Property_Area' />
+        <field-sort-custom-order field='Self_Employed' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='cdw_sapp_loan_application' id='cdw_sapp_loan_application_7D1FFFEE042D493BBF923A74C918B812'>
+            <properties context=''>
+              <relation connection='mariadb.1tq8rl21gxcyvk18adyas0jm855d' name='cdw_sapp_loan_application' table='[cdw_sapp_loan_application]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Application Approvals for Married Men vs Women by Income Range'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_loan_application (creditcard_capstone)' name='federated.03kmntn0k1no1m1bnn5nm0h2qmap' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03kmntn0k1no1m1bnn5nm0h2qmap'>
+            <column caption='Application ID' datatype='string' name='[Application_ID]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[Application_Status]' role='dimension' type='nominal' />
+            <column caption='Loan Application Count' datatype='integer' name='[Calculation_-8511803292752826368]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([Application_ID])' />
+            </column>
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Income]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Married]' role='dimension' type='nominal' />
+            <column-instance column='[Application_Status]' derivation='None' name='[none:Application_Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Income]' derivation='None' name='[none:Income:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Married]' derivation='None' name='[none:Married:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8511803292752826368]' derivation='User' name='[usr:Calculation_-8511803292752826368:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Application_Status:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Application_Status:nk]' member='&quot;No&quot;' />
+                <groupfilter function='member' level='[none:Application_Status:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Married:nk]'>
+            <groupfilter function='member' level='[none:Married:nk]' member='&quot;Yes&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk]' direction='DESC' measure-to-sort-by='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Married:nk]</column>
+            <column>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk]' value='#f3faf9' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Income:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk] / [federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Income:nk])</rows>
+        <cols>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]</cols>
+      </table>
+      <simple-id uuid='{4E1F49E4-8E83-44DC-8899-3CAE0CB9A7F1}' />
+    </worksheet>
+    <worksheet name='Application Status by Property Area'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_loan_application (creditcard_capstone)' name='federated.03kmntn0k1no1m1bnn5nm0h2qmap' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03kmntn0k1no1m1bnn5nm0h2qmap'>
+            <column caption='Application ID' datatype='string' name='[Application_ID]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[Application_Status]' role='dimension' type='nominal' />
+            <column caption='Loan Application Count' datatype='integer' name='[Calculation_-8511803292752826368]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([Application_ID])' />
+            </column>
+            <column caption='Property Area' datatype='string' name='[Property_Area]' role='dimension' type='nominal' />
+            <column-instance column='[Application_Status]' derivation='None' name='[none:Application_Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Property_Area]' derivation='None' name='[none:Property_Area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8511803292752826368]' derivation='User' name='[usr:Calculation_-8511803292752826368:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Property_Area:nk] / [federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk])</rows>
+        <cols>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]</cols>
+      </table>
+      <simple-id uuid='{8F1D2620-6B18-41CE-81B4-27B4C785CD3C}' />
+    </worksheet>
+    <worksheet name='ApplicationStatusbyGenderPropertyArea'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Application Status by Gender and Property Area</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_loan_application (creditcard_capstone)' name='federated.03kmntn0k1no1m1bnn5nm0h2qmap' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03kmntn0k1no1m1bnn5nm0h2qmap'>
+            <column caption='Application ID' datatype='string' name='[Application_ID]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[Application_Status]' role='dimension' type='nominal' />
+            <column caption='Loan Application Count' datatype='integer' name='[Calculation_-8511803292752826368]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([Application_ID])' />
+            </column>
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column caption='Property Area' datatype='string' name='[Property_Area]' role='dimension' type='nominal' />
+            <column-instance column='[Application_Status]' derivation='None' name='[none:Application_Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Property_Area]' derivation='None' name='[none:Property_Area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8511803292752826368]' derivation='User' name='[usr:Calculation_-8511803292752826368:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]'>
+            <groupfilter function='member' level='[none:Application_Status:nk]' member='&quot;Yes&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]' />
+              <text column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk]' />
+              <text column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Property_Area:nk]' />
+              <color column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk]' />
+              <color column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Property_Area:nk]' />
+              <lod column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk]</field>
+                  <field>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Property_Area:nk]</field>
+                  <field>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Male&quot;</value>
+                <value>&quot;Semiurban&quot;</value>
+                <value>121</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{B998376A-1A69-4A7B-B645-50C7FF459D85}' />
+    </worksheet>
+    <worksheet name='ApplicationStatusbyGenderSelfEmployed_Dependents'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Application Status by Gender, Self Employed and Dependents
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_loan_application (creditcard_capstone)' name='federated.03kmntn0k1no1m1bnn5nm0h2qmap' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03kmntn0k1no1m1bnn5nm0h2qmap'>
+            <column caption='Application ID' datatype='string' name='[Application_ID]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[Application_Status]' role='dimension' type='nominal' />
+            <column caption='Loan Application Count' datatype='integer' name='[Calculation_-8511803292752826368]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([Application_ID])' />
+            </column>
+            <column datatype='string' name='[Dependents]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column caption='Self Employed' datatype='string' name='[Self_Employed]' role='dimension' type='nominal' />
+            <column-instance column='[Application_Status]' derivation='None' name='[none:Application_Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Dependents]' derivation='None' name='[none:Dependents:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Self_Employed]' derivation='None' name='[none:Self_Employed:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8511803292752826368]' derivation='User' name='[usr:Calculation_-8511803292752826368:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Application_Status:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Application_Status:nk]' member='&quot;No&quot;' />
+                <groupfilter function='member' level='[none:Application_Status:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Dependents:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]</rows>
+        <cols>([federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk] / ([federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Self_Employed:nk] / [federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Dependents:nk]))</cols>
+      </table>
+      <simple-id uuid='{1AE72755-1D07-4369-9178-0F7DADE6D4A1}' />
+    </worksheet>
+    <worksheet name='ApplicationStautsbyIncomeGenderEduc'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Application Stauts by Gender, Education and Income</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cdw_sapp_loan_application (creditcard_capstone)' name='federated.03kmntn0k1no1m1bnn5nm0h2qmap' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03kmntn0k1no1m1bnn5nm0h2qmap'>
+            <column caption='Application ID' datatype='string' name='[Application_ID]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[Application_Status]' role='dimension' type='nominal' />
+            <column caption='Loan Application Count' datatype='integer' name='[Calculation_-8511803292752826368]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Count([Application_ID])' />
+            </column>
+            <column datatype='string' name='[Education]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Income]' role='dimension' type='nominal' />
+            <column-instance column='[Application_Status]' derivation='None' name='[none:Application_Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Education]' derivation='None' name='[none:Education:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Income]' derivation='None' name='[none:Income:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_-8511803292752826368]' derivation='User' name='[usr:Calculation_-8511803292752826368:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]'>
+            <groupfilter function='member' level='[none:Application_Status:nk]' member='&quot;Yes&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Application_Status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk]' />
+              <color column='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Income:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk] / ([federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Education:nk] / [federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Income:nk]))</rows>
+        <cols>[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[usr:Calculation_-8511803292752826368:qk]</cols>
+      </table>
+      <simple-id uuid='{B782CC88-2A6C-46C9-8691-3DEF13F05AAF}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='44'>
+    <window class='worksheet' maximized='true' name='Application Approvals for Married Men vs Women by Income Range'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Income:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{8C5DBD47-55BE-44A5-A798-99B918842041}' />
+    </window>
+    <window class='worksheet' name='Application Status by Property Area'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6C2B518F-25D8-41F1-947D-6BCCF0581CB3}' />
+    </window>
+    <window class='worksheet' name='ApplicationStatusbyGenderSelfEmployed_Dependents'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Dependents:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{59262631-D70F-4FF4-881D-3D5CA61E2F98}' />
+    </window>
+    <window class='worksheet' name='ApplicationStautsbyIncomeGenderEduc'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+            <card pane-specification-id='0' param='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Income:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{240748E6-3DD5-44F3-8434-16DEC3D9B475}' />
+    </window>
+    <window class='worksheet' name='ApplicationStatusbyGenderPropertyArea'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Gender:nk]&#10;[federated.03kmntn0k1no1m1bnn5nm0h2qmap].[none:Property_Area:nk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E1C38107-9D1E-43A3-9301-DDA2385242CA}' />
+    </window>
+  </windows>
+</workbook>
